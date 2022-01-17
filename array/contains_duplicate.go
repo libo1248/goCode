@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"sort"
 )
 
@@ -25,18 +24,6 @@ import (
 
 相关标签：数组 哈希表 排序
 */
-
-func main() {
-	for _, nums := range [][]int{
-		{1, 1, 1, 1, 2, 3, 3, 3, 3, 4, 5, 6, 6, 6, 6, 7, 7, 7, 7, 7},
-		{},
-		{1},
-		{1, 2, 3, 4},
-	} {
-		fmt.Println(nums, containsDuplicate(nums))
-		fmt.Println(nums, containsDuplicate2(nums))
-	}
-}
 
 func containsDuplicate(nums []int) bool {
 	if len(nums) <= 1 {

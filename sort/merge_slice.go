@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 /*
 合并两个有序数组
 给你两个按 非递减顺序 排列的整数数组nums1 和 nums2，另有两个整数 m 和 n ，分别表示 nums1 和 nums2 中的元素数目。
@@ -40,15 +38,6 @@ nums2.length == n
 
 相关标签：数组 双指针 排序
 */
-
-func main() {
-	nums1 := []int{2, 0}
-	m := 1
-	nums2 := []int{1}
-	n := 1
-	mergeSlice(nums1, m, nums2, n)
-	fmt.Println(nums1)
-}
 
 func mergeSlice(nums1 []int, m int, nums2 []int, n int) {
 	index := len(nums1) - 1

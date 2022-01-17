@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 /*
 移动零
 给定一个数组 nums，编写一个函数将所有 0 移动到数组的末尾，同时保持非零元素的相对顺序。
@@ -17,12 +15,6 @@ import "fmt"
 
 相关标签：数组 双指针
 */
-
-func main() {
-	nums := []int{1, 2, 0, 0, 5, 4, 3, 0, 9, 0}
-	moveZeroes(nums)
-	fmt.Println(nums)
-}
 
 func moveZeroes(nums []int) {
 	i := 0

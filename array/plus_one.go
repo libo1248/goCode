@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 /*
 加一
 给定一个由 整数 组成的 非空 数组所表示的非负整数，在该数的基础上加一。
@@ -33,10 +31,6 @@ import "fmt"
 
 相关标签：数组 数学
 */
-
-func main() {
-	fmt.Println(plusOne([]int{8, 9, 9, 9, 9, 9}))
-}
 
 func plusOne(digits []int) []int {
 	i := len(digits) - 1

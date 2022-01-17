@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"math"
 )
 
@@ -13,22 +12,6 @@ import (
 23 => 0
 103 => 0 (前导0不作为组成数字，因此31不符合要求）
 */
-
-func main() {
-	var n uint32
-
-	fmt.Println("请输入一个正整数:")
-	_, err := fmt.Scanf("%d", &n)
-	if err != nil {
-		fmt.Println("输入错误！")
-		return
-	}
-
-	fmt.Println("n:", n)
-
-	fmt.Println("结果:", getMaxNum(n))
-
-}
 
 func getMaxNum(n uint32) uint32 {
 	// 解析出输入的每位数字

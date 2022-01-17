@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 /*
 删除排序数组中的重复项
 给你一个有序数组 nums ，请你 原地 删除重复出现的元素，使每个元素 只出现一次 ，返回删除后数组的新长度。
@@ -42,19 +40,6 @@ nums 已按升序排列
 
 相关标签：数组 双指针
 */
-
-func main() {
-	for _, nums := range [][]int{
-		{1, 1, 1, 1, 2, 3, 3, 3, 3, 4, 5, 6, 6, 6, 6, 7, 7, 7, 7, 7},
-		{},
-		{1},
-		{1, 2, 3, 4},
-	} {
-		n := removeDuplicates(nums)
-		fmt.Println(nums, nums[:n])
-	}
-
-}
 
 func removeDuplicates(nums []int) int {
 	n := len(nums)

@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 /*
 字符串中的第一个唯一字符
 给定一个字符串，找到它的第一个不重复的字符，并返回它的索引。如果不存在，则返回 -1。
@@ -17,12 +15,6 @@ s = "loveleetcode"
 
 相关标签：队列 哈希表 字符串 计数
 */
-
-func main() {
-	for _, s := range []string{"leetcode", "loveleetcode"} {
-		fmt.Println(s, string(s[firstUniqChar(s)]))
-	}
-}
 
 func firstUniqChar(s string) int {
 	var cSlice [26]int

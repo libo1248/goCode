@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 /*
 买卖股票的最佳时机 II
 给定一个数组 prices ，其中prices[i] 是一支给定股票第 i 天的价格。
@@ -33,16 +31,6 @@ import "fmt"
 0 <= prices[i] <= 104
 相关标签：贪心 数组 动态规划
 */
-
-func main() {
-	for _, prices := range [][]int{
-		{1, 2, 3, 4, 5, 7},
-		{},
-		{1},
-	} {
-		fmt.Println(maxProfit(prices))
-	}
-}
 
 func maxProfit(prices []int) int {
 	if len(prices) < 2 {

@@ -1,9 +1,5 @@
 package main
 
-import (
-	"fmt"
-)
-
 /*
 旋转数组
 给你一个数组，将数组中的元素向右轮转 k个位置，其中k是非负数。
@@ -36,21 +32,7 @@ import (
 相关标签：数组 数学 双指针
 */
 
-func main() {
-	for _, nums := range [][]int{
-		{},
-		{1, 2},
-		{1, 2, 3, 4, 5, 6, 7},
-	} {
-		n := 1
-		fmt.Println("nums", nums, n)
-		rotate(nums, n)
-		fmt.Println("newNums", nums)
-	}
-
-}
-
-func rotate(nums []int, k int) {
+func rotateSlice(nums []int, k int) {
 	n := len(nums)
 	if n == 0 || k <= 0 {
 		return

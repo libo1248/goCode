@@ -34,12 +34,6 @@ import (
 相关标签：数学
 */
 
-func main() {
-	for _, x := range []int{123, -654243123, 1, -1234567899} {
-		fmt.Println(x, numReverse(x))
-	}
-}
-
 func numReverse(x int) int {
 	var res, newRes int
 	for x != 0 {

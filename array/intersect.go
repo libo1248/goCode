@@ -1,10 +1,5 @@
 package main
 
-import (
-	"fmt"
-	"sort"
-)
-
 /*
 两个数组的交集
 给定两个数组，编写一个函数来计算它们的交集。
@@ -30,15 +25,6 @@ import (
 
 相关标签：数组 哈希表 双指针 二分查找 排序
 */
-
-func main() {
-	nums1, nums2 := []int{1, 1, 1, 2, 3, 3}, []int{1, 1, 2, 2, 3, 3}
-	fmt.Println(intersect1(nums1, nums2))
-
-	sort.Ints(nums1)
-	sort.Ints(nums2)
-	fmt.Println(intersect2(nums1, nums2))
-}
 
 func intersect1(nums1 []int, nums2 []int) []int {
 	m1 := make(map[int]int)

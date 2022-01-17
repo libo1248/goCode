@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 /*
 两数之和
 给定一个整数数组 nums和一个整数目标值 target，请你在该数组中找出 和为目标值 target 的那两个整数，并返回它们的数组下标。
@@ -33,15 +31,6 @@ import "fmt"
 
 相关标签：数组 哈希表
 */
-
-func main() {
-	nums1, target1 := []int{2, 7, 11, 15}, 9
-	fmt.Println(nums1, target1, twoSum(nums1, target1))
-	nums2, target2 := []int{3, 2, 4}, 6
-	fmt.Println(nums2, target2, twoSum(nums2, target2))
-	nums3, target3 := []int{3, 3}, 6
-	fmt.Println(nums3, target3, twoSum(nums3, target3))
-}
 
 func twoSum(nums []int, target int) []int {
 	if len(nums) < 2 {

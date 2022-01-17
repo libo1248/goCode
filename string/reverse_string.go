@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 /*
 反转字符串
 编写一个函数，其作用是将输入的字符串反转过来。输入字符串以字符数组 s 的形式给出。
@@ -21,18 +19,6 @@ s[i] 都是 ASCII 码表中的可打印字符
 
 相关标签：递归 双指针 字符串
 */
-
-func main() {
-	for _, s := range [][]byte{
-		[]byte("hello"),
-		[]byte("test"),
-	} {
-		fmt.Printf("%s\n", s)
-		reverseString(s)
-		fmt.Printf("new: %s\n", s)
-	}
-
-}
 
 func reverseString(s []byte) {
 	i, j := 0, len(s)-1
