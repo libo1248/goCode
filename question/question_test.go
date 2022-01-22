@@ -19,3 +19,42 @@ func TestPermute(t *testing.T) {
 	fmt.Println("---------------")
 	fmt.Println(permute(nums))
 }
+
+func TestSortOrderNum(t *testing.T) {
+	orders := []int{
+		11221234,
+		11211234,
+		11121235,
+		11221232,
+		11121231,
+	}
+	sortOrders(orders)
+
+	fmt.Println(orders)
+}
+
+func TestLrcCache(t *testing.T) {
+	lru := NewLRUCache(4)
+	lru.Put(1, 1)
+	lru.Print()
+	lru.Put(2, 2)
+	lru.Print()
+	lru.Put(3, 3)
+	lru.Print()
+	lru.Put(4, 4)
+	lru.Print()
+	lru.Put(1, 1)
+	lru.Print()
+	lru.Put(6, 6)
+	lru.Print()
+	lru.Get(6)
+	lru.Print()
+	lru.Put(2, 2)
+	lru.Print()
+	lru.Put(4, 4)
+	lru.Print()
+	lru.Put(1, 1)
+	lru.Print()
+	lru.Put(4, 4)
+	lru.Print()
+}
