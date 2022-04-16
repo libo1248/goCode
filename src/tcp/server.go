@@ -3,7 +3,6 @@ package main
 import (
 	"fmt"
 	"net"
-	"strings"
 )
 
 func main() {
@@ -42,24 +41,9 @@ func handleConnection(c net.Conn) {
 			break
 		}
 
-		//3.3 根据输入流进行逻辑处理
-		//buf数据 -> 去两端空格的string
-		inStr := strings.TrimSpace(string(buf[0:cnt]))
-		//去除 string 内部空格
-		cInputs := strings.Split(inStr, " ")
-		//获取 客户端输入第一条命令
-		fCommand := cInputs[0]
+		fmt.Println("收到数据：", buf[:cnt])
 
-		fmt.Println("客户端传输->" + fCommand)
-
-		switch fCommand {
-		case "ping":
-			c.Write([]byte("服务器端回复-> pong\n"))
-		case "hello":
-			c.Write([]byte("服务器端回复-> world\n"))
-		default:
-			c.Write([]byte("服务器端回复" + fCommand + "\n"))
-		}
+		c.Write(buf[:cnt])
 	}
 
 	fmt.Printf("来自 %v 的连接关闭\n", c.RemoteAddr())
