@@ -1,7 +1,5 @@
-module goCode
+module gopn
 
 go 1.13
 
-require (
-    google.golang.org/protobuf v1.28.0
-)
+require google.golang.org/protobuf v1.28.0
